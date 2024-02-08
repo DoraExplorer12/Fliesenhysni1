@@ -1,0 +1,508 @@
+body {
+    height: 100%;
+    width: 100%;
+     background: fixed;
+     background-image: linear-gradient(45deg, rgb(64, 101, 126),rgb(132, 178, 201));
+     font-family: 'Figtree';
+     margin: 0 auto;
+
+   
+ }
+
+ html {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth; /* damit es so smooth scrollt wenn man in der nav auf start etc geht*/
+    overflow-x: hidden;
+ 
+
+ }
+  /* -- Navbar -- */ 
+
+
+
+
+  .navbar {
+    display: flex;
+    justify-content: center; /*damit es in der mitte ist*/
+    align-items: center;
+    background-color: rgba(106, 117, 145, 0.9); /* rgba da ist noch das a für die opacity also die 0.9 ist opacity von 0-1*/
+    height: 50px;
+    font-size: 17px;
+    left: 0;  /* left, right, top = 0 damit die navbar bis ganz an den rand geht*/
+    right: 0;
+    top: 0;
+    margin: 0;
+    position: fixed; /* damit die navabr immer oben ist auch wenn man scrollt */
+    z-index: 1000000000000000; /* z index sind die ebenen, hier hoch damit nichts über die navbar geht beim scrollen*/
+  }
+.nav-link {
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Figtree';
+    margin: 0 15px 0 15px;
+    position: relative;
+    font-weight: 300;
+}
+
+.nav-link::after {
+    margin-top: 1px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px; /* wie dick der strich unter dem text ist*/
+    border-radius: 10px;
+    background-color: #86b3db; /* farbe von dem strich*/
+    transition: width 0.3s;  /* width= strich geht nach rechts in 0.3sekunden */
+}
+.nav-link:hover::after {
+width: 100%;
+}
+/* Home */
+   
+.logo {
+    display: flex;
+    justify-content: center;
+}
+.logo-1{
+    display: flex; 
+    object-fit: cover; /*damit es nicht so verzerrt ist cover dann passt sich das Bild an die größe und weite an*/
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+}
+.logo-2 {
+    display: flex;
+    padding-top: 55px;
+    justify-content: center;
+    z-index: 3;
+}
+.logo-3 {
+    z-index: 2;
+    opacity: 65%;
+    width: 100%;
+    height: 600px;
+    right: 0;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+}
+.Home-text {
+    display: flex ;
+    font-family: 'Figtree';
+   font-weight: 300;
+    color: rgb(255, 255, 255);
+    margin-left: 60px;
+    margin-right:60px;
+    margin-bottom: 100px;
+    margin-top:70px ;      
+    text-align: center;
+    font-size: 25px;
+}
+.Home-text-box {
+    background-color: rgba(216, 216, 216, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 10px #b9d3e9;
+}
+.header-home {
+    font-size: 15px;
+    margin-top: 2;
+    margin-bottom: 0;
+    color: rgb(64, 101, 126);
+    font-weight: 500;
+}
+
+/*Bilder*/
+
+.place {
+    padding: 550px;
+}
+.bilder-1 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(64, 101, 126);
+    padding: 10px;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+}
+.bilder-2 {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(64, 101, 126);
+    padding: 10px;
+    left: 0;
+    right: 0;
+    position: absolute;  
+}
+
+#myImg {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left:5px ;
+    margin-right:5px;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  #myImg2 {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left:5px ;
+    margin-right:5px;
+  
+  }
+  
+  #myImg2:hover {opacity: 0.7;}
+  #myImg3 {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left:5px ;
+    margin-right:5px;
+   
+  }
+  
+  #myImg3:hover {opacity: 0.7;}
+  #myImg4 {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left:5px ;
+    margin-right:5px;
+   
+  }
+  
+  #myImg4:hover {opacity: 0.7;}
+  #myImg5 {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left:5px ;
+    margin-right:5px;
+   
+  }
+  
+  #myImg5:hover {opacity: 0.7;}
+  
+  #myImg6 {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left:5px ;
+    margin-right:5px;
+   
+  }
+  
+  #myImg6:hover {opacity: 0.7;}
+  
+  #myImg7 {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left:5px ;
+    margin-right:5px;
+   
+  }
+  
+  #myImg7:hover {opacity: 0.7;}
+  
+  
+  
+  /*  Modal (hintergurnd) */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10000000000000; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+  }
+  
+  
+  /* Modal Content (Bild) */
+  .modal-content {
+    margin: auto;
+    display: flex;
+    height: 70%;
+    width: 30%;
+    max-width: 700px;
+    z-index: 100;
+  }
+  
+  /* Modal Beschreibeung */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /*Zoom in das Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 100;
+  }
+  .close2 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 100;
+  }
+  .close3 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 100;
+  }
+  .close4 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 100;
+  }
+  .close5 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 100;
+  }
+  .close6 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 100;
+  }
+  .close7 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 100;
+  }
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .close2:hover,
+  .close2:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .close3:hover,
+  .close3:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .close4:hover,
+  .close4:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .close5:hover,
+  .close5:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .close6:hover,
+  .close6:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .close7:hover,
+  .close7:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* Für kleinere Screens: */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+  /* -- Infos -- */
+
+.hr1 {
+    width: 400px;
+    color: #fff;
+    margin-bottom: 40px;
+    opacity: 90%;
+   
+}
+.Info-header {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+   padding: auto;
+   font-weight: 500;
+}
+/* -- Kontakt -- */
+  .kontakt-header {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+   padding: auto;
+   font-weight: 500;
+  }
+  .kontakt {
+    display: flex;
+    justify-content: center;
+  }
+  .kontakt-table {
+    color: #ffffff;
+    width: 70%;
+    padding-bottom: 50px;
+    background: rgba(255, 255, 255, 0.4) ;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-bottom: 200px;
+    
+}
+.kontakt-table td {
+    border-collapse: collapse;
+    margin: 30px;
+    padding: 10px;
+}
+.kontakt-table th {
+    border-collapse: collapse;
+    margin: 30px;
+    padding: 10px;
+}
+.kontakt-table-color {
+    background-color:rgba(64, 101, 126,0.5);
+}
+
+/* --- Footer --- */
+
+
+footer {
+    
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgb(106, 117, 145),rgb(86, 115, 117));
+    height: auto;
+    width: 100%;
+    
+   
+    bottom: 0;
+    position: relative;
+    font-family: 'Figtree';
+  
+}
+.footer-content img {
+  padding-left: 17px;
+}
+
+.legal {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  color: #86b3db;
+  text-decoration: none;
+}
+.legal p {
+  color: #fff;
+}
+.l2 {
+  text-decoration: none;
+  color:  rgb(23, 59, 73);
+}
+.impressum {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+.impressum h1 {
+  margin-top: 70px;
+}
+.impressum p {
+  margin-top: 100px;
+}
+.header-imp {
+  font-size: 50px;
+}
+.imp {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+}
+.imp-c {
+  margin-bottom: 300px;
+}
+.imp-3 {
+  
+  color: floralwhite;
+}
